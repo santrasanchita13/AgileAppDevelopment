@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AgileAppDeveloperApplication {
 
 	public static void main(String[] args) {
-		//comment to commit
 		SpringApplication.run(AgileAppDeveloperApplication.class, args);
+		System.out.println("HI, I'm on");
 	}
 }
