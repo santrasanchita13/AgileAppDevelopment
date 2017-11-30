@@ -17,6 +17,7 @@ apply plugin: 'org.springframework.boot'
 group = 'com.pakhi'
 version = '0.0.2-AgileApp'
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
@@ -24,6 +25,7 @@ repositories {
 
 
 dependencies {
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
 	compile('org.springframework.boot:spring-boot-starter-security')
 	runtime('org.postgresql:postgresql')
