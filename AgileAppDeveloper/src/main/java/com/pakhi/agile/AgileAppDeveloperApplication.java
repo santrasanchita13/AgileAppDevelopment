@@ -14,7 +14,9 @@ public class AgileAppDeveloperApplication {
 		SpringApplication.run(AgileAppDeveloperApplication.class, args);
 	}
 	
-	/*@Bean
+	/*
+	//For initiating anything
+	@Bean
 	CommandLineRunner init(AgileUserRepository agileUserRepository) {
 		return(evt) -> {
 			AgileUser result = agileUserRepository.save(new AgileUser("santra.sanchita13@gmail.com", ROLES.DEVELOPER, "Sanchita", "Santra"));
