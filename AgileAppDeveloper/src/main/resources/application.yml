@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: sks
+    url: jdbc:postgresql://google/postgres?socketFactory=com.google.cloud.sql.postgres.SocketFactory&socketFactoryArg=agileapplogin:asia-south1:agiledatabase&user=postgres&password=sks
+    username: postgres
+  jpa:
+    generate-ddl: 'true'
+
+google:
+  client:
+    clientId: 137128664949-vv0vp37qa30paa7o2aer02kikp0n9105.apps.googleusercontent.com
+    clientSecret: ${appSecret}
+    accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+    userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+    clientAuthenticationScheme: form
+    scope: openid, email, profile
+  resource:
+    userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+    preferTokenInfo: true

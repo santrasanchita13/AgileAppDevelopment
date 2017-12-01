@@ -1,5 +1,6 @@
 package com.pakhi.agile;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -76,6 +77,12 @@ public class AgileAppDeveloperApplicationTests {
 				.content(this.json(new AgileUser("pakhi@gmail.com", ROLES.CUSTOMER, "Pakhi", "S")))
 				.contentType(contentType))
 		.andExpect(status().isOk());
+	}
+	
+	@Test
+	public void goToHome() throws Exception {
+		mockMvc.perform(get("/"))
+			.andExpect(status().isOk());
 	}
 	
 	protected String json(Object o) throws IOException {
