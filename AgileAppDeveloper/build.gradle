@@ -4,7 +4,7 @@ buildscript {
 		appSecret = 'z0yS6FyQfnMt4-jZIuVTmm-Q'
 		dockerVersion = '0.13.0'
 		jarVersion = '0.0.2'
-		jarGroupName = 'pakhi'
+		jarGroupName = 'sanchitasantra'
 	}
 	repositories {
 		mavenCentral()
