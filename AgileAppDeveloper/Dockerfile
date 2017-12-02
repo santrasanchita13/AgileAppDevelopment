@@ -2,6 +2,9 @@ FROM ubuntu:14.04 AS jarfile
 VOLUME /gitjar
 COPY . /gitjar/gitrepo/
 WORKDIR /gitjar/gitrepo/AgileAppDeveloper
+RUN sudo apt-get update
+RUN sudo apt-get install -y openjdk-8-jdk
+RUN update-alternatives --config java
 RUN ls & ./gradlew build jar && ./gradlew build bootRepackage
 
 FROM openjdk:8-jdk-alpine
