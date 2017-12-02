@@ -5,11 +5,13 @@ VOLUME /gitjar
 #RUN sudo apt-get install -y git
 #RUN sudo git clone https://github.com/santrasanchita13/AgileAppDevelopment.git && ls
 #ADD https://github.com/santrasanchita13/AgileAppDevelopment /gitjar/gitrepo
-#WORKDIR AgileAppDevelopment
-#RUN ls
-#WORKDIR AgileAppDeveloper
-#RUN ./gradlew build jar && ./gradlew build bootRepackage
+COPY . /gitjar/gitrepo
+WORKDIR /gitjar/gitrepo
 RUN ls
+WORKDIR AgileAppDevelopment
+RUN ls
+WORKDIR AgileAppDeveloper
+RUN ./gradlew build jar && ./gradlew build bootRepackage
 
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
