@@ -1,7 +1,8 @@
 FROM ubuntu:14.04 AS jarfile
 VOLUME /gitjar
 WORKDIR /gitjar/gitrepo
-RUN sudo apt-get update && apt-get install git
+RUN sudo apt-get update
+RUN sudo apt-get install -y git
 RUN git clone https://github.com/santrasanchita13/AgileAppDevelopment.git
 WORKDIR /gitjar/gitrepo/AgileAppDevelopment/AgileAppDeveloper
 RUN ./gradlew build jar && ./gradlew build bootRepackage
