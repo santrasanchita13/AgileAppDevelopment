@@ -1,15 +1,15 @@
 FROM ubuntu:14.04 AS jarfile
 VOLUME /gitjar
-WORKDIR /gitjar/gitrepo
-RUN sudo apt-get update
-RUN sudo apt-get install -y git
-RUN sudo git clone https://github.com/santrasanchita13/AgileAppDevelopment.git && ls
+#WORKDIR /gitjar/gitrepo
+#RUN sudo apt-get update
+#RUN sudo apt-get install -y git
+#RUN sudo git clone https://github.com/santrasanchita13/AgileAppDevelopment.git && ls
 #ADD https://github.com/santrasanchita13/AgileAppDevelopment /gitjar/gitrepo
-WORKDIR AgileAppDevelopment
+#WORKDIR AgileAppDevelopment
+#RUN ls
+#WORKDIR AgileAppDeveloper
+#RUN ./gradlew build jar && ./gradlew build bootRepackage
 RUN ls
-WORKDIR AgileAppDeveloper
-RUN ./gradlew build jar && ./gradlew build bootRepackage
-
 
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
