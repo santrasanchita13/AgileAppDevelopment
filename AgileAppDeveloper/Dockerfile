@@ -2,8 +2,9 @@ FROM ubuntu:14.04 AS jarfile
 VOLUME /gitjar
 COPY . /gitjar/gitrepo/
 WORKDIR /gitjar/gitrepo/AgileAppDeveloper
+RUN sudo add-apt-repository ppa:webupd8team/java -y
 RUN sudo apt-get update
-RUN sudo apt-get install -y openjdk-7-jdk
+RUN sudo apt-get install -y oracle-java8-set-default
 RUN update-alternatives --config java
 RUN ls & ./gradlew build jar && ./gradlew build bootRepackage
 
