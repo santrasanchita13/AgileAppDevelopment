@@ -3,9 +3,9 @@ VOLUME /gitjar
 WORKDIR /gitjar/gitrepo
 RUN sudo apt-get update
 RUN sudo apt-get install -y git
-RUN git clone https://github.com/santrasanchita13/AgileAppDevelopment.git
+RUN git clone https://github.com/santrasanchita13/AgileAppDevelopment.git && ls
 WORKDIR /gitjar/gitrepo/AgileAppDevelopment/AgileAppDeveloper
-RUN ./gradlew build jar && ./gradlew build bootRepackage
+RUN ls && ./gradlew build jar && ./gradlew build bootRepackage
 
 
 FROM openjdk:8-jdk-alpine
