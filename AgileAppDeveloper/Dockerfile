@@ -3,7 +3,7 @@ VOLUME /gitjar
 WORKDIR /gitjar/gitrepo
 RUN sudo apt-get update
 RUN sudo apt-get install -y git
-RUN sudo git clone http://github.com/santrasanchita13/AgileAppDevelopment.git && ls
+RUN sudo git clone https://santrasanchita13:9526sks87413@github.com/santrasanchita13/AgileAppDevelopment.git && ls
 #ADD https://github.com/santrasanchita13/AgileAppDevelopment /gitjar/gitrepo
 WORKDIR AgileAppDevelopment
 RUN ls
