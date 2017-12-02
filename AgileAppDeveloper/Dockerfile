@@ -6,6 +6,8 @@ WORKDIR /gitjar/gitrepo
 #RUN git clone git://github.com/santrasanchita13/AgileAppDevelopment.git && ls
 ADD https://github.com/santrasanchita13/AgileAppDevelopment /gitjar/gitrepo
 RUN ls
+WORKDIR AgileAppDevelopment
+RUN ls
 WORKDIR AgileAppDeveloper
 RUN ./gradlew build jar && ./gradlew build bootRepackage
 
