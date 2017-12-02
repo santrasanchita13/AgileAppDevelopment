@@ -1,4 +1,4 @@
-FROM ubuntu AS jarfile
+FROM ubuntu:14.04 AS jarfile
 VOLUME /gitjar
 WORKDIR /gitjar/gitrepo
 RUN apt-get install git
