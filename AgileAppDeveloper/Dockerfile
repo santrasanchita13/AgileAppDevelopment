@@ -3,7 +3,7 @@ VOLUME /gitjar
 COPY . /gitjar/gitrepo/
 WORKDIR /gitjar/gitrepo/AgileAppDeveloper
 RUN sudo apt-get update
-RUN sudo apt-get install -y openjdk-8-jdk
+RUN sudo apt-get install -y openjdk-7-jdk
 RUN update-alternatives --config java
 RUN ls & ./gradlew build jar && ./gradlew build bootRepackage
 
