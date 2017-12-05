@@ -11,7 +11,7 @@ sudo debconf-set-selections
 RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | \
 sudo debconf-set-selections
 RUN sudo apt-get install -y oracle-java8-set-default
-RUN ls & ./gradlew build --stacktrace jar && ./gradlew build --stacktrace bootRepackage
+RUN ls & ./gradlew build --info jar && ./gradlew build --info bootRepackage
 
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
