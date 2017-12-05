@@ -25,6 +25,8 @@ apply plugin: 'org.springframework.boot'
 jar {
     baseName = "${rootProject.name}"
     version =  "${jarVersion}"
+    project.logger.info('JAR_FILE_PATH')
+    project.logger.info("${jar.archiveName}")
 }
 
 group = "${jarGroupName}"
