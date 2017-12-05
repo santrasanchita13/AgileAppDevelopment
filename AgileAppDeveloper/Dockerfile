@@ -15,6 +15,7 @@
 #RUN ./gradlew build --info jar && ./gradlew build --info bootRepackage
 #RUN ls /gitjar/gitrepo/AgileAppDeveloper/build/libs
 
+
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 COPY . /tmp/gitrepo
