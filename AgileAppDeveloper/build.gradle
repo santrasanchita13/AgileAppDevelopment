@@ -27,6 +27,7 @@ jar {
     version =  "${jarVersion}"
     project.logger.info('JAR_FILE_PATH')
     project.logger.info("${jar.archiveName}")
+    project.logger.info("${jar.archivePath}")
 }
 
 group = "${jarGroupName}"
