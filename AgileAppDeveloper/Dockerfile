@@ -24,4 +24,4 @@ ENV GOOGLE_APPLICATION_CREDENTIALS /tmp/gitrepo/AgileAppDeveloper/src/main/resou
 #COPY --from=jarfile /gitjar/gitrepo/AgileAppDeveloper/build/libs/agileappdeveloper-0.0.2.jar app.jar
 #ARG JAR_FILE
 #ADD ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/tmp/gitrepo/src/main/resources/agileappdeveloper-0.0.2.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/tmp/gitrepo/src/main/resources/agileappdeveloper.jar"]
