@@ -13,6 +13,7 @@ sudo debconf-set-selections
 RUN sudo apt-get install -y oracle-java8-set-default
 ENV GOOGLE_APPLICATION_CREDENTIALS /gitjar/gitrepo/AgileAppDeveloper/src/main/resources/AgileAppLogin-beb6fc34e914.json
 RUN ls & ./gradlew build --info jar && ./gradlew build --info bootRepackage
+RUN ls /gitjar/gitrepo/AgileAppDeveloper
 
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
