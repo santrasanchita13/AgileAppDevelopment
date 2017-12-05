@@ -11,6 +11,7 @@ sudo debconf-set-selections
 RUN echo debconf shared/accepted-oracle-license-v1-1 seen true | \
 sudo debconf-set-selections
 RUN sudo apt-get install -y oracle-java8-set-default
+ENV GOOGLE_APPLICATION_CREDENTIALS /gitjar/gitrepo/AgileAppDeveloper/src/main/resources/AgileAppLogin-beb6fc34e914.json
 RUN ls & ./gradlew build --info jar && ./gradlew build --info bootRepackage
 
 FROM openjdk:8-jdk-alpine
