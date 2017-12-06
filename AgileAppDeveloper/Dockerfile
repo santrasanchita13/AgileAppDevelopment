@@ -18,7 +18,7 @@
 
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-COPY . /tmp/gitrepo
+COPY . /tmp/gitrepo/
 #ADD /tmp/gitrepo/src/main/resources/agileappdeveloper-0.0.2.jar app.jar
 ENV GOOGLE_APPLICATION_CREDENTIALS /tmp/gitrepo/AgileAppDeveloper/src/main/resources/AgileAppLogin-beb6fc34e914.json
 #COPY --from=jarfile /gitjar/gitrepo/AgileAppDeveloper/build/libs/agileappdeveloper-0.0.2.jar app.jar
